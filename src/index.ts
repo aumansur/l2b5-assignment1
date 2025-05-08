@@ -9,12 +9,11 @@ const formatString = (input: string, toUpper?: boolean): string => {
   }
 };
 
-const result1 = formatString("ASFF World", false);
+// const result1 = formatString("ASFF World", false);
 // console.log(result1);
 // Output: "asff world"
-// problem 2
-//Create a function that filters an array of objects by the rating property, returning only items with a rating of 4 or more.
 
+// problem 2
 const filterByRating = (
   items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] => {
@@ -29,13 +28,12 @@ const filteredItems = filterByRating(books);
 // console.log(filteredItems); // Output: [ { title: 'Item 2', rating: 4 }, { title: 'Item 3', rating: 5 } ]
 
 // problem 3
-//create a generic function that concatenates multiple arrays of the same type using rest parameters.
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return arrays.reduce((acc, curr) => acc.concat(curr), []);
 };
 
-const result3 = concatenateArrays(["a", "b"], ["c"]); // Output: ["a", "b", "c"]
-concatenateArrays([1, 2], [3, 4], [5]);
+// const result3 = concatenateArrays(["a", "b"], ["c"]); // Output: ["a", "b", "c"]
+// concatenateArrays([1, 2], [3, 4], [5]);
 
 // console.log(result3); // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -81,7 +79,7 @@ const processValue = (value: string | number): number => {
   }
   throw new Error("Invalid type");
 };
-const result5 = processValue(4);
+// const result5 = processValue(4);
 // console.log(result5); // Output: 5
 
 // problem 6
@@ -103,8 +101,8 @@ const products = [
   { name: "Pencil", price: 90 },
   { name: "Bag", price: 50 },
 ];
-const mostExpensiveProduct = getMostExpensiveProduct(products);
-console.log(mostExpensiveProduct);
+// const mostExpensiveProduct = getMostExpensiveProduct(products);
+// console.log(mostExpensiveProduct);
 
 // problem 7
 enum Day {
@@ -122,8 +120,6 @@ const getDayType = (day: Day): string => {
   }
   return "Weekday";
 };
-const dayType = getDayType(Day.Friday); // Output: "Weekend"
-console.log(dayType); // Output: "Weekend"
 
 // problem 8
 
@@ -138,6 +134,3 @@ const squareAsync = async (n: number): Promise<number> => {
     }, 1000);
   });
 };
-const result8 = squareAsync(4);
-result8.then(console.log);
-result8.catch(console.error);
